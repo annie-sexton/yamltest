@@ -22,9 +22,9 @@ services:
 - type: static
   name: yaml-rm-static
   buildCommand: yarn
-  staticPublishpath: .
+  staticPublishPath: .
   envVars:
-    key: newVar
+  - key: newVar
     value: newVal
 
 databases:
