@@ -5,6 +5,10 @@ envVarGroups:
   envVars:
   - key: evg-test-key-1
     value: env-test-value-1
+- name: taml-pr-test-2
+  envVars:
+  - key: anotherVar
+    value: anotherVal
 
 services:
 - type: web
@@ -15,8 +19,18 @@ services:
   envVars:
   - key: test
     value: tested
+- type: static
+  name: yaml-rm-static
+  buildCommand: yarn
+  staticPublishpath: .
+  envVars:
+    key: newVar
+    value: newVal
 
 databases:
 - name: yaml_pr_test_db
   databaseName: mydb
   user: myuser
+- name: another_db
+  databaseName: myotherdb
+  user: myotheruser
