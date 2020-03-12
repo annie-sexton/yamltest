@@ -1,4 +1,4 @@
-enablePullRequestPreviews: true
+pullRequestPreviewsEnabled: true
 
 envVarGroups:
 - name: yaml-pr-test-evg
