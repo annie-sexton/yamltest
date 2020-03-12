@@ -17,6 +17,6 @@ services:
     value: tested
 
 databases:
-- name: yaml-pr-test-db
+- name: yaml_pr_test_db
   databaseName: mydb
   user: myUser
