@@ -19,4 +19,4 @@ services:
 databases:
 - name: yaml_pr_test_db
   databaseName: mydb
-  user: myUser
+  user: myuser
