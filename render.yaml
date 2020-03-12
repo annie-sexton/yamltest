@@ -20,6 +20,7 @@ services:
   - key: test
     value: tested
 - type: static
+  env: static
   name: yaml-rm-static
   buildCommand: yarn
   staticPublishPath: .
