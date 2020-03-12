@@ -1,0 +1,22 @@
+enablePullRequestPreviews: true
+
+envVarGroups:
+- name: yaml-pr-test-evg
+  envVars:
+  - key: evg-test-key-1
+    value: env-test-value-1
+
+services:
+- type: web
+  name: yaml-pr-test-node
+  env: node
+  buildCommand: yarn
+  startCommand: node index.js
+  envVars:
+  - key: test
+    value: tested
+
+databases:
+- name: yaml-pr-test-db
+  databaseName: mydb
+  user: myUser
