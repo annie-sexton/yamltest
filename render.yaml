@@ -21,7 +21,7 @@ services:
     value: tested
   - key: neededThis
     value: fakeval
-- type: static
+- type: web
   env: static
   name: yaml-rm-static
   buildCommand: yarn
