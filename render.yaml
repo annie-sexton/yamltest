@@ -15,7 +15,7 @@ services:
   name: yaml-pr-test-node
   env: node
   buildCommand: yarn
-  startCommand: node index.js
+  startCommand: node index.js && true
   envVars:
   - key: test
     value: tested
