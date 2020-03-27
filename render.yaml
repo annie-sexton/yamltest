@@ -21,6 +21,10 @@ services:
     value: tested
   - key: neededThis
     value: fakeval
+  - key: DB_URL
+    fromDatabase:
+      name: another_db
+      property: connectionString
 - type: web
   env: static
   name: yaml-rm-static
