@@ -29,7 +29,7 @@ services:
     fromService:
       name: redis
       type: pserv
-      propery: hostport
+      property: hostport
 # A private Redis instance
 - type: pserv
   name: redis
