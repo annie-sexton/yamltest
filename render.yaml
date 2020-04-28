@@ -36,9 +36,9 @@ services:
   repo: https://github.com/render-examples/redis.git # optional
   envVars:
   - key: GENERATED_SECRET
-    generateValue: true       # will generate a base64-encoded 256-bit secret
+    generateValue: true
   - key: DASHBOARD_SECRET
-    sync: false               # placeholder for a value to be added in the dashboard
+    sync: false
   disk:
     name: redis-data
     mountPath: /var/lib/redis
