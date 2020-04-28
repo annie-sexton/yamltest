@@ -46,9 +46,6 @@ services:
   autoDeploy: false             # optional
 
 databases:
-- name: yaml_pr_test_db
-  databaseName: mydb
-  user: myuser
 - name: another_db
   databaseName: myotherdb
   user: myotheruser
