@@ -25,14 +25,25 @@ services:
     fromDatabase:
       name: another_db
       property: connectionString
-- type: web
-  env: static
-  name: yaml-rm-static
-  buildCommand: yarn
-  staticPublishPath: .
+  - key: REDIS_URL
+    fromDatabase:
+      name: redis
+      propery: connectionString
+# A private Redis instance
+- type: pserv
+  name: redis
+  env: docker
+  repo: https://github.com/render-examples/redis.git # optional
   envVars:
-  - key: newVar
-    value: newVal
+  - key: GENERATED_SECRET
+    generateValue: true       # will generate a base64-encoded 256-bit secret
+  - key: DASHBOARD_SECRET
+    sync: false               # placeholder for a value to be added in the dashboard
+  disk:
+    name: redis-data
+    mountPath: /var/lib/redis
+    sizeGB: 10                # optional
+  autoDeploy: false             # optional
 
 databases:
 - name: yaml_pr_test_db
