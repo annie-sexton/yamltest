@@ -26,7 +26,7 @@ services:
       name: another_db
       property: connectionString
   - key: REDIS_URL
-    fromDatabase:
+    fromService:
       name: redis
       propery: connectionString
 # A private Redis instance
