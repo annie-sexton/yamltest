@@ -28,7 +28,8 @@ services:
   - key: REDIS_URL
     fromService:
       name: redis
-      propery: connectionString
+      type: pserv
+      propery: hostport
 # A private Redis instance
 - type: pserv
   name: redis
