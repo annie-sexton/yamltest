@@ -5,5 +5,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(10000, () => {
-    console.log("Up and at em")
+    console.log("Up and at em!")
 });
