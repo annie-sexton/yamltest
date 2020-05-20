@@ -50,3 +50,4 @@ databases:
 - name: another_db
   databaseName: myotherdb
   user: myotheruser
+  plan: Starter
