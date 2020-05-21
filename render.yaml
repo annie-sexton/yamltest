@@ -12,6 +12,7 @@ envVarGroups:
 
 services:
 - type: web
+  plan: starter
   name: yaml-pr-test-node
   env: node
   buildCommand: yarn
@@ -32,6 +33,7 @@ services:
       property: hostport
 # A private Redis instance
 - type: pserv
+  plan: starter
   name: redis
   env: docker
   repo: https://github.com/render-examples/redis.git
@@ -50,4 +52,4 @@ databases:
 - name: another_db
   databaseName: myotherdb
   user: myotheruser
-  plan: Starter
+  plan: starter
