@@ -1,5 +1,5 @@
 pullRequestPreviewsEnabled: true
-
+pullRequestPreviewsExpireAfterDays: 3
 envVarGroups:
 - name: yaml-pr-test-evg
   envVars:
