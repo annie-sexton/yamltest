@@ -17,6 +17,7 @@ services:
   env: node
   buildCommand: yarn
   startCommand: node index.js && true
+  afterFirstDeployCommand: date && true
   envVars:
   - key: test
     value: tested
@@ -37,6 +38,7 @@ services:
   name: redis
   env: docker
   repo: https://github.com/render-examples/redis.git
+  afterFirstDeployCommand: redis-cli -p $PORT info memory
   envVars:
   - key: GENERATED_SECRET
     generateValue: true
