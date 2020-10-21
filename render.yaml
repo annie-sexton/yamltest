@@ -1,5 +1,5 @@
 pullRequestPreviewsEnabled: true
-#pullRequestPreviewsExpireAfterDays: 3
+pullRequestPreviewsExpireAfterDays: 3
 envVarGroups:
 - name: yaml-pr-test-evg
   envVars:
@@ -12,7 +12,8 @@ envVarGroups:
 
 services:
 - type: web
-  plan: starter
+  plan: standard
+  previewPlan: starter
   name: yaml-pr-test-node
   env: node
   buildCommand: yarn
@@ -21,6 +22,7 @@ services:
   envVars:
   - key: test
     value: tested
+    previewValue: preview-test
   - key: neededThis
     value: fakeval
   - key: DB_URL
@@ -54,4 +56,5 @@ databases:
 - name: another_db
   databaseName: myotherdb
   user: myotheruser
-  plan: starter
+  plan: standard
+  previewPlan: starter
