@@ -19,6 +19,9 @@ services:
   buildCommand: yarn
   startCommand: node index.js && true
   afterFirstDeployCommand: date && true
+  buildFilter:
+    paths:
+    - "src/*"
   envVars:
   - key: test
     value: tested
